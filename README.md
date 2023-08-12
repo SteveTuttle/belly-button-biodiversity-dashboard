@@ -1,2 +1,89 @@
 # belly-button-challenge
 UNC_data_bootcamp_module_14
+
+## Challenge Description
+### Background
+> This dataset reveals that a small handful of microbial species (_also called operational taxonomic units, or __OTU__s, in the study_) were present in more than 70% of people, while the rest were relatively rare.
+
+***from the UNC Bootcamp instructions for this challenge***
+
+
+## Deliverables
+In this challenge, I will need to build an interactive dashboard to explore the Belly Button Biodiversity datasetLinks to an external site., which catalogs the microbes that colonize human navels.
+
+### Challenge Instructions
+Complete the following steps:
+1) Use the D3 library to read in `samples.json` from the URL `https://2u-data-curriculum-team.s3.amazonaws.com/dataviz-classroom/v1.1/14-Interactive-Web-Visualizations/02-Homework/samples.json`.
+2) Create a horizontal bar chart with a dropdown menu to display the top 10 OTUs found in that individual.
+  * Use `sample_values` as the values for the bar chart.
+  * Use `otu_ids` as the labels for the bar chart.
+  * Use `otu_labels` as the hovertext for the chart.
+
+![Top 10 OTU]   placeholder
+
+3) Create a bubble chart that displays each sample.
+  * Use `otu_ids` for the x values.
+  * Use `sample_values` for the y values.
+  * Use `sample_values` for the marker size.
+  * Use `otu_ids` for the marker colors.
+  * Use `otu_labels` for the text values.
+
+![Bubble Chart]  placeholder
+
+4) Display the sample metadata, i.e., an individual's demographic information.
+5) Display each key-value pair from the metadata JSON object somewhere on the page.
+
+![Demographic Info]  placeholder
+
+6) Update all the plots when a new sample is selected. Additionally, you are welcome to create any layout that you would like for your dashboard.
+
+_An example dashboard is shown as follows_:
+
+![Belly Button DB example]
+
+7) Deploy your app to a free static page hosting service, such as GitHub Pages. Submit the links to your deployment and your GitHub repo. Ensure that your repository has regular commits and a thorough README.md file
+
+
+### Advanced Challenge Assignment
+The following task is advanced and therefore optional.
+* Adapt the Gauge Chart from https://plot.ly/javascript/gauge-charts/Links to an external site. to plot the weekly washing frequency of the individual.
+* You will need to modify the example gauge code to account for values ranging from 0 through 9.
+* Update the chart whenever a new sample is selected.
+
+![Belly Button Wash Frequency]
+
+## Resources
+### Bootcamp References -- update later
+Module 14 Instructions
+
+Starter_Code
+* index.html
+* samples.json
+
+static/js
+* .gitkeep
+* app.js
+
+
+Example Data:
+
+output_data
+* cities.csv
+* Fig1.png
+
+
+***Special Thanks:***
+* Jamie Miller
+* Mounika Mamindla
+* Lisa Shemanciik
+
+### External References
+_(where possible will provide link to website)_
+* [citypy library](https://github.com/wingchen/citipy)
+* [pandas documentation](https://pandas.pydata.org/docs/reference/general_functions.html)
+* [matplotlib documentation](https://matplotlib.org/stable/index.html)
+* [hvplot documentation](https://hvplot.holoviz.org/reference/geopandas/points.html)
+* [scipy.stats documentation](https://docs.scipy.org/doc/scipy/reference/stats.html)
+
+
+
