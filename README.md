@@ -3,7 +3,7 @@ UNC_data_bootcamp_module_14
 
 ## Challenge Description
 ### Background
-> This dataset reveals that a small handful of microbial species (_also called operational taxonomic units, or __OTU__s, in the study_) were present in more than 70% of people, while the rest were relatively rare.
+> This dataset reveals that a small handful of microbial species (_also called operational taxonomic units, or OTUs, in the study_) were present in more than 70% of people, while the rest were relatively rare.
 
 ***from the UNC Bootcamp instructions for this challenge***
 
