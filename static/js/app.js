@@ -52,6 +52,33 @@ function data_charts(samples) {
 
         let otu_labels = showResult.otu_labels;
         console.log(otu_labels);
+
+        // Build bubble-chart
+        // Create trace
+        let bubbleTrace = {
+            x: otu_ids,
+            y: sample_values,
+            text: otu_labels,
+            mode: 'markers',
+            marker: {
+                size: sample_values,
+                color: otu_ids,
+                colorscale: 'Earth'
+            }
+        };
+
+        let bubbleData = [bubbleTrace];
+
+        let bubbleLayout = {
+            title: 'Presense of OTUs per Sample',
+            showlegend: false,
+            xaxis: {title: 'OTU ID'},
+            yaxis: {title: 'sample count'}
+        };
+
+        // Build bubble-chart at <div id="bubble"></div>
+        Plotly.newPlot('bubble', bubbleData, bubbleLayout);
+
     });
 };
 
