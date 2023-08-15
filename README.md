@@ -11,6 +11,10 @@ UNC_data_bootcamp_module_14
 ## Deliverables
 In this challenge, I will need to build an interactive dashboard to explore the Belly Button Biodiversity datasetLinks to an external site., which catalogs the microbes that colonize human navels.
 
+The completed dashboard, with all visualizations can be viewed on the following GitHub Pages site:
+
+[stevetuttle.github/belly-button-challenge](https://stevetuttle.github.io/belly-button-challenge/)
+
 ### Challenge Instructions
 Complete the following steps:
 1) Use the D3 library to read in `samples.json` from the URL `https://2u-data-curriculum-team.s3.amazonaws.com/dataviz-classroom/v1.1/14-Interactive-Web-Visualizations/02-Homework/samples.json`.
@@ -46,7 +50,7 @@ _An example dashboard is shown as follows_:
 
 ### Advanced Challenge Assignment
 The following task is advanced and therefore optional.
-* Adapt the Gauge Chart from https://plot.ly/javascript/gauge-charts/Links to an external site. to plot the weekly washing frequency of the individual.
+* Adapt the Gauge Chart from [Gauge Charts in JavaScript](https://plotly.com/javascript/gauge-charts/) example to plot the weekly washing frequency of the individual.
 * You will need to modify the example gauge code to account for values ranging from 0 through 9.
 * Update the chart whenever a new sample is selected.
 
