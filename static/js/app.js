@@ -17,7 +17,7 @@ d3.json(sample_json).then(function(data) {
 });
 
 /*
-Swap the order of  performing Steps 2 and 3 from the instructions, but create the function to build both charts.
+Swap the order of performing Steps 2 and 3 from the instructions, but create the function to build both charts.
 Console log steps in process with to verify all variables.
 */
 
@@ -28,7 +28,7 @@ function data_charts(samples) {
         console.log("Testing sample_json data")
         console.log(data);
 
-        // Build chart data equal to data.samples from the console log
+        // Build "chart-data" equal to data.samples from the console log
         let chartData = data.samples;
         console.log(chartData);
 
@@ -109,18 +109,41 @@ function data_charts(samples) {
     });
 };
 
-
 /*
 4) Display the sample metadata, i.e., an individual's demographic information.
-*/
-
-
-
-/*
+    &
 5) Display each key-value pair from the metadata JSON object somewhere on the page.
 */
 
+function demoInformation(samples) {
+    d3.json(sample_json).then(function(data) {
+        console.log("Testing sample_json data")
+        console.log(data);
 
+        // Input demo "information" equal to data.metadata from the console log
+        let information = data.metadata;
+        console.log(information);
+
+        // Filter the information into a Metadata Array
+        let metadataArray = information.filter(infoObject => infoObject.id == samples);
+        console.log(metadataArray);
+
+        // unpack Object from the Metadata Array
+        let shareResult = metadataArray[0];
+        console.log(shareResult);
+
+        // Setup information for the demographic info panel using <div id="sample-metadata" class="panel-body"></div>
+        let demoPanel = d3.select('#sample-metadata');
+
+        // Clean demoPanel
+        demoPanel.html("");
+
+        // Iterate over each key-value pair from the metadata and append to demoPanel
+        for (key_value in shareResult) {
+            demoPanel.append('h5').text(`${key_value.toUpperCase()}: ${shareResult[key_value]}`);
+        };
+    });
+}
 
 /*
 6) Update all the plots when a new sample is selected. Additionally, you are welcome to create any layout that you would like for your dashboard.
@@ -133,12 +156,33 @@ function data_charts(samples) {
 */
 
 
-
 // Create 'jumpstart' function to initialize other functions when/where needed
 function jumpstart() {
+    d3.json(sample_json).then(function(data) {
+        // console.log("Testing sample_json data")
+        // console.log(data);
+
+        let subjectNames = data.names;
+        console.log(subjectNames);
+
+        // Write code for dropdown menu, use <select id="selDataset" onchange="optionChanged(this.value)"></select>
+        let dropdownSelect = d3.select('#selDataset');
+
+        // Iterate over each name in subjectNames
+        for (let index = 0; index < subjectNames.length; index++) {
+            // dropdown and chain
+            dropdownSelect.append('option').text(subjectNames[index]).property('value', subjectNames[index]);
+            
+        };
+
 
     // initialize data_charts function
     data_charts(940);
+
+    // initialize demoInformation function
+    demoInformation(940);
+
+    });
 
 };
 

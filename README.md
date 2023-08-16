@@ -13,7 +13,7 @@ In this challenge, I will need to build an interactive dashboard to explore the 
 
 The completed dashboard, with all visualizations can be viewed on the following GitHub Pages site:
 
-[stevetuttle.github/belly-button-challenge](https://stevetuttle.github.io/belly-button-challenge/)
+[SteveTuttle.GitHub/belly-button-challenge](https://stevetuttle.github.io/belly-button-challenge/)
 
 ### Challenge Instructions
 Complete the following steps:
@@ -69,13 +69,6 @@ static/js
 * app.js
 
 
-Example Data:
-
-output_data
-* cities.csv
-* Fig1.png
-
-
 ***Special Thanks:***
 * Jamie Miller
 * Mounika Mamindla
@@ -86,7 +79,8 @@ _(where possible will provide link to website)_
 * [pandas documentation](https://pandas.pydata.org/docs/reference/general_functions.html)
 * [matplotlib documentation](https://matplotlib.org/stable/index.html)
 * [hvplot documentation](https://hvplot.holoviz.org/reference/geopandas/points.html)
-* [scipy.stats documentation](https://docs.scipy.org/doc/scipy/reference/stats.html)
+* [JavaScript Objects: Keys, etc documentation](https://javascript.info/keys-values-entries)
+* [D3.JSON() documentation](https://devdocs.io/d3~5/d3-request#json)
 * [Plotly horizontal-bar-charts in JavaScript](https://plotly.com/javascript/horizontal-bar-charts/)
 * [Plotly bubble-charts in JavaScript](https://plotly.com/javascript/bubble-charts/)
 * [Plotly colorscales in JavaScript](https://plotly.com/javascript/colorscales/)
