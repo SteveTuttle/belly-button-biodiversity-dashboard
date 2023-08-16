@@ -75,10 +75,6 @@ static/js
 * Lisa Shemanciik
 
 ### External References
-_(where possible will provide link to website)_
-* [pandas documentation](https://pandas.pydata.org/docs/reference/general_functions.html)
-* [matplotlib documentation](https://matplotlib.org/stable/index.html)
-* [hvplot documentation](https://hvplot.holoviz.org/reference/geopandas/points.html)
 * [JavaScript Objects: Keys, etc documentation](https://javascript.info/keys-values-entries)
 * [D3.JSON() documentation](https://devdocs.io/d3~5/d3-request#json)
 * [Plotly horizontal-bar-charts in JavaScript](https://plotly.com/javascript/horizontal-bar-charts/)

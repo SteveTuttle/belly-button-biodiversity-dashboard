@@ -17,13 +17,14 @@ d3.json(sample_json).then(function(data) {
 });
 
 /*
-Swap the order of performing Steps 2 and 3 from the instructions, but create the function to build both charts.
+For steps 2 and 3 swapping the order for coding these from the instructions, results will be the same.
+Creating the function to build both charts.
 Console log steps in process with to verify all variables.
 */
 
 // Create chart building function for data -- this will be for both bar and bubble charts
-function data_charts(samples) {
-    console.log("Testing the data_charts function");
+function dataCharts(samples) {
+    console.log("Testing the dataCharts function");
     d3.json(sample_json).then(function(data) {
         console.log("Testing sample_json data")
         console.log(data);
@@ -114,7 +115,7 @@ function data_charts(samples) {
     &
 5) Display each key-value pair from the metadata JSON object somewhere on the page.
 */
-
+// Create a function to hold the metadata for the demographic information in the Info Panel
 function demoInformation(samples) {
     d3.json(sample_json).then(function(data) {
         console.log("Testing sample_json data")
@@ -148,12 +149,15 @@ function demoInformation(samples) {
 /*
 6) Update all the plots when a new sample is selected. Additionally, you are welcome to create any layout that you would like for your dashboard.
 */
+// Create "Event Listener" using <select id="selDataset" onchange="optionChanged(this.value)"></select>
+function optionChanged(listSelect) {
+    // update dataCharts
+    dataCharts(listSelect);
 
+    // update demographic information for demoPanel
+    demoInformation(listSelect);
 
-
-/*
-
-*/
+};
 
 
 // Create 'jumpstart' function to initialize other functions when/where needed
@@ -175,12 +179,14 @@ function jumpstart() {
             
         };
 
+    // Create variable to select Test Subject data
+    let subjectIDno = subjectNames[0];
 
-    // initialize data_charts function
-    data_charts(940);
+    // initialize dataCharts function
+    dataCharts(subjectIDno);
 
     // initialize demoInformation function
-    demoInformation(940);
+    demoInformation(subjectIDno);
 
     });
 
