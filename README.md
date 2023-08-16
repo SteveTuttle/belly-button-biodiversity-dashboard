@@ -83,12 +83,12 @@ output_data
 
 ### External References
 _(where possible will provide link to website)_
-* [citypy library](https://github.com/wingchen/citipy)
 * [pandas documentation](https://pandas.pydata.org/docs/reference/general_functions.html)
 * [matplotlib documentation](https://matplotlib.org/stable/index.html)
 * [hvplot documentation](https://hvplot.holoviz.org/reference/geopandas/points.html)
 * [scipy.stats documentation](https://docs.scipy.org/doc/scipy/reference/stats.html)
-* [Plotly bubble-charts JavaScript](https://plotly.com/javascript/bubble-charts/)
-
-
+* [Plotly horizontal-bar-charts in JavaScript](https://plotly.com/javascript/horizontal-bar-charts/)
+* [Plotly bubble-charts in JavaScript](https://plotly.com/javascript/bubble-charts/)
+* [Plotly colorscales in JavaScript](https://plotly.com/javascript/colorscales/)
+* [Plotly text-and-annotations in JavaScript](https://plotly.com/javascript/text-and-annotations/)
 

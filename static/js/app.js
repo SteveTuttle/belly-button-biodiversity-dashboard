@@ -17,11 +17,8 @@ d3.json(sample_json).then(function(data) {
 });
 
 /*
-2) Create a horizontal bar chart with a dropdown menu to display the Top 10 OTUs found in that individual.
-* Use 'sample_values' as the values for the bar chart.
-* Use 'otu_ids' as the labels for the bar chart.
-* Use 'otu_labels' as the hovertext for the chart.
-
+Swap the order of  performing Steps 2 and 3 from the instructions, but create the function to build both charts.
+Console log steps in process with to verify all variables.
 */
 
 // Create chart building function for data -- this will be for both bar and bubble charts
@@ -31,12 +28,12 @@ function data_charts(samples) {
         console.log("Testing sample_json data")
         console.log(data);
 
-        // Build bar chart data equal to data.samples from the console log
-        let barData = data.samples;
-        console.log(barData);
+        // Build chart data equal to data.samples from the console log
+        let chartData = data.samples;
+        console.log(chartData);
 
         // begin filtering the samples into Array
-        let dataArray = barData.filter(samplesObject => samplesObject.id == samples);
+        let dataArray = chartData.filter(samplesObject => samplesObject.id == samples);
         console.log(dataArray);
 
         // unpack Object from the Array
@@ -54,7 +51,14 @@ function data_charts(samples) {
         console.log(otu_labels);
 
         // Build bubble-chart
-        // Create trace
+        /*  
+            3) Create a bubble chart that displays each sample.
+                * Use 'otu_ids' for the x values.
+                * Use 'sample_values' for the y values.
+                * Use 'sample_values' for the marker size.
+                * Use 'otu_ids' for the marker colors.
+                * Use 'otu_labels' for the text values.
+        */
         let bubbleTrace = {
             x: otu_ids,
             y: sample_values,
@@ -79,26 +83,38 @@ function data_charts(samples) {
         // Build bubble-chart at <div id="bubble"></div>
         Plotly.newPlot('bubble', bubbleData, bubbleLayout);
 
+        // Build horizontal bar chart
+        /*
+            2) Create a horizontal bar chart with a dropdown menu to display the Top 10 OTUs found in that individual.
+                * Use 'sample_values' as the values for the bar chart.
+                * Use 'otu_ids' as the labels for the bar chart.
+                * Use 'otu_labels' as the hovertext for the chart.
+        */
+        let barData = [{
+            type: 'bar',
+            x: sample_values.slice(0,10).reverse(),
+            y: otu_ids.slice(0,10).map(OTUs => `OTU ${OTUs}`).reverse(),
+            text: otu_labels.slice(0,10).reverse(),
+            orientation: 'h'
+        }];
+
+        let barLayout = {
+            title: 'Top 10 OTUs',
+
+        };
+
+        // Build horizontal-bar-chart at <div id="bar"></div>
+        Plotly.newPlot('bar', barData, barLayout);
+
     });
 };
-
-
-
-/*
-3) Create a bubble chart that displays each sample.
-* Use 'otu_ids' for the x values.
-* Use 'sample_values' for the y values.
-* Use 'sample_values' for the marker size.
-* Use 'otu_ids' for the marker colors.
-* Use 'otu_labels' for the text values.
-
-*/
-
 
 
 /*
 4) Display the sample metadata, i.e., an individual's demographic information.
 */
+
+
 
 /*
 5) Display each key-value pair from the metadata JSON object somewhere on the page.
