@@ -141,8 +141,11 @@ function demoInformation(samples) {
 
         // Iterate over each key-value pair from the metadata and append to demoPanel
         for (key_value in shareResult) {
-            demoPanel.append('h5').text(`${key_value.toUpperCase()}: ${shareResult[key_value]}`);
+            demoPanel.append('h4').text(`${key_value.toUpperCase()}: ${shareResult[key_value]}`);
         };
+
+        // for **BONUS** pass the 'wfreq' through the bonusGauge function
+        bonusGauge(shareResult.wfreq);
     });
 }
 

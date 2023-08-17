@@ -43,7 +43,7 @@ Complete the following steps:
 
 _An example dashboard is shown as follows_:
 
-![Belly Button DB example]
+![Belly Button DB example](https://github.com/SteveTuttle/belly-button-challenge/blob/main/images/belly-button-db-example.png)
 
 7) Deploy your app to a free static page hosting service, such as GitHub Pages. Submit the links to your deployment and your GitHub repo. Ensure that your repository has regular commits and a thorough README.md file
 
