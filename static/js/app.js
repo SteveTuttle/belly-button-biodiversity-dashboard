@@ -54,11 +54,11 @@ function dataCharts(samples) {
         // Build bubble-chart
         /*  
             3) Create a bubble chart that displays each sample.
-                * Use 'otu_ids' for the x values.
-                * Use 'sample_values' for the y values.
-                * Use 'sample_values' for the marker size.
-                * Use 'otu_ids' for the marker colors.
-                * Use 'otu_labels' for the text values.
+                * Use 'otu_ids' for the x values. [x]
+                * Use 'sample_values' for the y values. [x]
+                * Use 'sample_values' for the marker size. [x]
+                * Use 'otu_ids' for the marker colors. [x]
+                * Use 'otu_labels' for the text values. [x]
         */
         let bubbleTrace = {
             x: otu_ids,
@@ -87,9 +87,9 @@ function dataCharts(samples) {
         // Build horizontal bar chart
         /*
             2) Create a horizontal bar chart with a dropdown menu to display the Top 10 OTUs found in that individual.
-                * Use 'sample_values' as the values for the bar chart.
-                * Use 'otu_ids' as the labels for the bar chart.
-                * Use 'otu_labels' as the hovertext for the chart.
+                * Use 'sample_values' as the values for the bar chart. [x]
+                * Use 'otu_ids' as the labels for the bar chart. [x]
+                * Use 'otu_labels' as the hovertext for the chart. []
         */
         let barData = [{
             type: 'bar',
@@ -141,7 +141,7 @@ function demoInformation(samples) {
 
         // Iterate over each key-value pair from the metadata and append to demoPanel
         for (key_value in shareResult) {
-            demoPanel.append('h4').text(`${key_value.toUpperCase()}: ${shareResult[key_value]}`);
+            demoPanel.append('h6').text(`${key_value.toUpperCase()}: ${shareResult[key_value]}`);
         };
 
         // for **BONUS** pass the 'wfreq' through the bonusGauge function
