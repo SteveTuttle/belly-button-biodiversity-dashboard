@@ -23,7 +23,6 @@ Complete the following steps:
   * Use `otu_ids` as the _labels_ for the bar chart.
   * Use `otu_labels` as the _hovertext_ for the chart.
 
-![Top 10 OTU]   placeholder
 
 3) Create a bubble chart that displays each sample.
   * Use `otu_ids` for the __x__ values.
@@ -32,12 +31,10 @@ Complete the following steps:
   * Use `otu_ids` for the _marker colors_.
   * Use `otu_labels` for the _text values_.
 
-![Bubble Chart]  placeholder
 
 4) Display the sample metadata, i.e., an individual's demographic information.
 5) Display each key-value pair from the metadata JSON object somewhere on the page.
 
-![Demographic Info]  placeholder
 
 6) Update all the plots when a new sample is selected. Additionally, you are welcome to create any layout that you would like for your dashboard.
 
@@ -54,7 +51,6 @@ The following task is advanced and therefore optional.
 * You will need to modify the example gauge code to account for values ranging from 0 through 9.
 * Update the chart whenever a new sample is selected.
 
-![Belly Button Wash Frequency]
 
 ## Resources
 ### Bootcamp References -- update later

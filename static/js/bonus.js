@@ -77,7 +77,6 @@ let gaugeLayout = {
 };
 
 
-
 // build a guage-chart at <div id="gauge"></div> from index.html
 Plotly.newPlot('gauge', gaugeData, gaugeLayout);
 
