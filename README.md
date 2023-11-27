@@ -1,4 +1,4 @@
-# belly-button-challenge
+# belly-button-biodiversity-dashboard
 UNC_data_bootcamp_module_14
 
 ## Challenge Description
