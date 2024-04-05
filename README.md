@@ -13,7 +13,7 @@ In this challenge, I will need to build an interactive dashboard to explore the 
 
 The completed dashboard, with all visualizations can be viewed on the following GitHub Pages site:
 
-[SteveTuttle.GitHub/belly-button-challenge](https://stevetuttle.github.io/belly-button-challenge/)
+[SteveTuttle.GitHub/belly-button-challenge](https://stevetuttle.github.io/belly-button-biodiversity-dashboard/)
 
 ### Challenge Instructions
 Complete the following steps:
